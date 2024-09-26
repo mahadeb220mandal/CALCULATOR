@@ -1,0 +1,39 @@
+# task 2
+# calculator
+def calculator():
+    print("--simple calculator--")
+   
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    # Prompt the user for the operation they want to perform
+    print("Choose an operation:")
+    print("1. (+)")
+    print("2. (-)")
+    print("3. (*)")
+    print("4. (/)")
+
+    operation = input("Enter the operation (1/2/3/4): ")
+
+    # Perform the calculation based on the user's choice
+    if operation == '1':
+        result = num1 + num2
+        print(f"The result of {num1} + {num2} is {result}.")
+    elif operation == '2':
+        result = num1 - num2
+        print(f"The result of {num1} - {num2} is {result}.")
+    elif operation == '3':
+        result = num1 * num2
+        print(f"The result of {num1} * {num2} is {result}.")
+    elif operation == '4':
+        #division by zero
+        if num2 != 0:
+            result = num1 / num2
+            print(f"The result of {num1} / {num2} is {result}.")
+        else:
+            print("Division by zero is not allowed(ERROR).")
+    else:
+        print("Invalid operation selected.")
+
+# Call the calculator function to run the program
+calculator()
